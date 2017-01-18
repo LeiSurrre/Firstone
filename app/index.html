@@ -14,10 +14,15 @@
     <div id="main">
         <form class="complex_form" id="upload_image_form">
             <div class="form_title">Upload an image</div>
-            <input type="text" id="create_message_name" class="form_element" placeholder="Enter your name"/>
-            <textarea id="create_message_content" class="form_element" placeholder="Enter your message"  rows="5"></textarea>
+            <input type="text" id="create_message_name" class="image_form_element" placeholder="Enter your name"/>
+            <div id="profile_upload image_form_element">
+                <input type="radio" name="method" value="url"><label>URL</label>
+                <input type="radio" name="method" value="file"><label>File Upload</label>
+            </div>
+            <textarea type="text" class="profile_form_elmt image_form_element" placeholder="Enter the image url"></textarea>
+            <input type="file" id="choose_pic" class="image_form_element">
             <input type="submit" class="btn form_element"/>
-            <input type="button" value="open to upload an image" id="pic_toggle" class="btn" onclick="toggle()"/>
+            <input type="button" value="open to upload an image" id="pic_form_toggle" class="btn_down" onclick="toggle()" onmouseover="arrowDown()" onmouseout="arrowDownBack()"/>
         </form>
         
         <div id="messages">
@@ -33,7 +38,7 @@
                 </div>
             </div>
        </div>
-   </div>
+    </div>
     <footer>
         <a href='/credits.html'>credits</a>
     </footer>
@@ -42,8 +47,8 @@
 
     <script>
         var toggle = function() {
-            var mydiv = document.getElementsByClassName('form_element');
-            var picToggle = document.getElementById("pic_toggle");
+            var mydiv = document.getElementsByClassName('image_form_element');
+            var picToggle = document.getElementById("pic_form_toggle");
             var toggled = false;
             var i = 0;
             for (i; i < mydiv.length; i++) {
@@ -62,6 +67,26 @@
             }
         }
 
+</script>
+
+<script>
+function arrowDown(){
+    console.log('down1');
+    document.getElementById("pic_form_toggle").value = "";
+    console.log('down2');
+    document.getElementById("pic_form_toggle").className = "btn_down";
+    //document.getElementById("pic_form_toggle").onmouseover = 'none';
+    console.log('down3');
+    //document.getElementById("pic_form_toggle").onmouseout = 'arrowDownBack()';
+    console.log('down4');
+}
+
+function arrowDownBack(){
+    console.log('up');
+    document.getElementById("pic_form_toggle").value = "open to upload an image";
+    //document.getElementById("pic_form_toggle").onmouseover = 'arrowDown()';
+    //document.getElementById("pic_form_toggle").onmouseout = 'none';
+}
 </script>
     <!--<script src="js/model.js"></script>
     <script src="js/view.js"></script>

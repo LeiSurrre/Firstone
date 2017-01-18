@@ -28,6 +28,13 @@
      font-size: 20px;
      border-radius:10px;
      padding:5px 10px 5px 10px;
+}
+
+.complex_form .image_form_element{
+     margin-bottom:10px;
+     font-size: 20px;
+     border-radius:10px;
+     padding:5px 10px 5px 10px;
      display: none;
 }
 
@@ -44,6 +51,21 @@
 }
 
 .complex_form .btn:hover {
+  background: #3C3D3F;
+  color: #ffffff;
+}
+
+.complex_form .btn_down{
+    border-radius:10px;
+    text-align:center;
+    font-size: 20px;
+    color: #3C3D3F;
+    background: #ffffff;
+    border: 2px #3C3D3F solid;
+    padding: 10px 20px 10px 20px;
+}
+
+.complex_form .btn_down:hover {
   background: #3C3D3F;
   color: #ffffff;
 }
