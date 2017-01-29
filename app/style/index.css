@@ -62,3 +62,118 @@
 .down_button{
      background-image: url('../media/like6.png');
 }
+
+
+/* fen jie xian*/
+#gallery{
+    border: 2px #3C3D3F solid;
+    font-size: 20px;
+    display: flex;
+    align-content: center;
+    justify-content: space-between;
+    width: 100%;
+    margin: auto;
+    margin-top: 20px;
+}
+
+.pictures_container{
+    width: 600px;
+    min-height: 600px;
+    max-height:1000px;
+    border: 3px solid #73AD21;
+}
+
+#nothing{
+    width:600px;
+    height:450px;
+    background-color: #c3c3d5;
+    text-align: center;
+    color: #ffffff;
+    font-weight: bold;
+    font-family: "Arial Black", Arial;
+    font-size: 60px;
+    line-height: 90px;
+    padding-top: 150px;
+
+}
+
+.pictures_box{
+    width: 600px;
+    height: 600px;
+    border: 3px solid #73AD21;
+    margin: auto;
+    display: flex;
+}
+
+.picture{
+    border: 3px solid #730021;
+    margin: auto;
+}
+
+.pic_info{
+    display: block;
+}
+
+#comments{
+    margin-bottom: 20px;
+}
+
+#delete_image{
+    text-align: right;
+}
+
+#left_btn{
+    width: 10%;
+    height: 100px;
+    max-width: 100px;
+    border: 3px solid #631021;
+    margin-top: 250px;
+    margin-left: 10px;
+    background-image: url('../media/left.png');
+    background-size: 100%;
+}
+
+#left_btn:hover{
+    margin-left: 0px;
+}
+
+#right_btn{
+    width: 10%;
+    height: 100px;
+    max-width: 100px;
+    border: 3px solid #631021;
+    margin-top: 250px;
+    margin-right: 10px;
+    background-image: url('../media/right.png');
+    background-size: 100%;
+}
+
+#right_btn:hover{
+    margin-right: 0px;
+}
+
+.comment{
+    display: flex;
+    margin: auto;
+    justify-content: space-between;
+}
+
+.delete_comment{
+    height: 50px;
+    width: 50px;
+    background-color: #222222;
+    margin-top: auto;
+}
+
+.comment_paging{
+    display: flex;
+    margin: auto;
+    justify-content: space-between;
+}
+
+.change_page{
+    width: 25%;
+    display: flex;
+    justify-content: space-between;
+}
+

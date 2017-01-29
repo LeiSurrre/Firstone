@@ -5,6 +5,9 @@
     padding:20px 10px 10px 10px;
     display:flex;
     flex-direction: column;
+    max-width: 800px;
+    margin: auto;
+    margin-top: 20px;
 }
 
 .complex_form .form_title{
@@ -17,25 +20,19 @@
     border-radius: 7px 7px 0px 0px;
 }
 
-.complex_form .form_radio{
-    display:flex;
-    justify-content: flex-start;
-    align-items: center;
-}
-
-.complex_form .form_element{
+/*.complex_form .form_element{
      margin-bottom:10px;
      font-size: 20px;
      border-radius:10px;
      padding:5px 10px 5px 10px;
-}
+}*/
 
-.complex_form .image_form_element{
+.image_form_element{
      margin-bottom:10px;
      font-size: 20px;
      border-radius:10px;
      padding:5px 10px 5px 10px;
-     display: none;
+     display: block;
 }
 
 /* This snippet of code was generated using: http://css3buttongenerator.com/ */
@@ -51,11 +48,11 @@
 }
 
 .complex_form .btn:hover {
-  background: #3C3D3F;
-  color: #ffffff;
+    background: #3C3D3F;
+    color: #ffffff;
 }
 
-.complex_form .btn_down{
+.btn_down{
     border-radius:10px;
     text-align:center;
     font-size: 20px;
@@ -65,7 +62,11 @@
     padding: 10px 20px 10px 20px;
 }
 
-.complex_form .btn_down:hover {
-  background: #3C3D3F;
-  color: #ffffff;
+.btn_down:hover{
+    background: #3C3D3F;
+    color: #ffffff;
+}
+
+.btn_down:focus{
+    outline:0;
 }

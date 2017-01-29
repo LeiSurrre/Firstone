@@ -11,64 +11,79 @@
     <header>
         <h1>The Web Gallery</h1>
     </header>
-    <div id="main">
-        <form class="complex_form" id="upload_image_form">
-            <div class="form_title">Upload an image</div>
-            <input type="text" id="create_message_name" class="image_form_element" placeholder="Enter your name"/>
-            <div id="profile_upload image_form_element">
-                <input type="radio" name="method" value="url"><label>URL</label>
-                <input type="radio" name="method" value="file"><label>File Upload</label>
-            </div>
-            <textarea type="text" class="profile_form_elmt image_form_element" placeholder="Enter the image url"></textarea>
-            <input type="file" id="choose_pic" class="image_form_element">
-            <input type="submit" class="btn form_element"/>
-            <input type="button" value="open to upload an image" id="pic_form_toggle" class="btn_down" onclick="toggle()" onmouseover="arrowDown()" onmouseout="arrowDownBack()"/>
-        </form>
-        
-        <div id="messages">
-          <div class="message">
-                <div class="message_header">
-                    <div class="message_avatar"><img src="media/user.png" alt="Alice"/></div>
-                    <div class="message_name">Alice</div>
+
+    <form class="complex_form" id="upload_image_form">
+        <div class="form_title">Upload an image</div>
+        <div class="image_form_element">Title</div>
+        <input type="text" id="enter_title" class="image_form_element" placeholder="Please enter the title"/>
+        <div class="image_form_element">Author</div>
+        <input type="text" id="enter_author" class="image_form_element" placeholder="Please enter the author's name"/>
+        <div class="image_form_element">
+            <input type="radio" name="method" id="file_url" value="url" checked="true"><label>URL</label>
+            <input type="radio" name="method" id="upload_file" value="file"><label>Upload a File</label>
+        </div>
+        <div id="choose_pic" class="image_form_element" >
+            <input type="text" id="pic_url" class="image_form_element" placeholder="Enter the image url"/>
+        </div>
+        <!--<input type="file" id="choose_pic" class="image_form_element">-->
+        <input type="submit" class="btn image_form_element"/>
+        <!--<input type="button" value="open to upload an image" id="pic_form_toggle" class="btn_down" onclick="toggle()" onmouseover="arrowDown()" onmouseout="arrowDownBack()"/>-->
+        <input type="button" value="open to upload an image" id="pic_form_toggle" class="btn_down"/>
+    </form>
+
+    <div id="gallery">
+        <div id="left_btn"></div>
+        <div id="picture_container">
+            <div id="nothing">Nothing's<br>Here<br>Yet......</div>
+            <!--<div class="pictures_box"><img src="media/001.png" class="picture"></div>
+                <div class="pic_info">
+                    <div>title: #001</div>
+                    <div>author: me</div>
                 </div>
-                <div class="message_content">This microblog is way better than piazza!</div>
-                <div class="message_vote">
-                    <div class="down_button vote_button">0</div>
-                    <div class="up_button vote_button">0</div>
+            <div id="delete_image">delete</div>-->
+            <div id="comments">
+                <!--<div><h2>Comments</h2></div>
+                <div><hr></div>
+                <div class="comment">
+                    <div>
+                        <div><b>aaa</b>: this is good<br>a<br>a<br>a<br>a<br></div>
+                        <div>posted on ...</div>
+                    </div>
+                    <div class="delete_comment"></div>
                 </div>
+                <hr>
+                <div class="comment">
+                    <div>
+                        <div><b>aaa</b>: this is good</div>
+                        <div>posted on ...</div>
+                    </div>
+                    <div><div class="delete_comment"></div></div>
+                </div>
+                <hr>
+                <div class="comment_paging">
+                    <div class="change_page"><div><<</div>
+                    <div><</div></div>
+                    <div>page 1</div>
+                    <div class="change_page"><div>></div>
+                    <div>>></div></div>
+                </div>-->
             </div>
-       </div>
+        </div>
+        <div id="right_btn"></div>
+    </div>
+
+    <div id="comment_form_box">
+        <!--<form class="complex_form" id="comment_form">
+            <input placeholder="Enter your name"/>
+            <textarea rows="4" placeholder="Enter your message"></textarea>
+            <input type="submit"/>
+        </form>-->
     </div>
     <footer>
         <a href='/credits.html'>credits</a>
     </footer>
 
-    <script src="js/scripts.js"></script>
-
-    <script>
-        var toggle = function() {
-            var mydiv = document.getElementsByClassName('image_form_element');
-            var picToggle = document.getElementById("pic_form_toggle");
-            var toggled = false;
-            var i = 0;
-            for (i; i < mydiv.length; i++) {
-                if (mydiv[i].style.display == 'block' || mydiv[i].style.display == '') {
-                    mydiv[i].style.display = 'none';
-                    toggled = false;
-                } else {
-                    mydiv[i].style.display = 'block';
-                    toggled = true;
-                }
-            }
-            if (toggled) {
-                picToggle.value = "close";
-            } else {
-                picToggle.value = "open to upload an image";
-            }
-        }
-
-</script>
-
+<!--
 <script>
 function arrowDown(){
     console.log('down1');
@@ -87,9 +102,9 @@ function arrowDownBack(){
     //document.getElementById("pic_form_toggle").onmouseover = 'arrowDown()';
     //document.getElementById("pic_form_toggle").onmouseout = 'none';
 }
-</script>
-    <!--<script src="js/model.js"></script>
+</script>-->
+    <script src="js/model.js"></script>
     <script src="js/view.js"></script>
-    <script src="js/controller.js"></script>-->
+    <script src="js/controller.js"></script>
 </body>
 </html>
